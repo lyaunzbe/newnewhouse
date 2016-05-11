@@ -101,11 +101,11 @@ export default function(opt, canvasTexture) {
     var toolbeltShaders = new Toolbelt();
     var toolbeltShadersB = new Toolbelt();
     fbShaders = [
-        toolbeltShaders.blur,
+        toolbeltShaders.emboss,
         toolbeltShaders.oil,
         toolbeltShaders.diff,
-        toolbeltShadersB.warp,
-        toolbeltShadersB.blur,
+        toolbeltShadersB.emboss,
+        toolbeltShadersB.oil,
         toolbeltShaders.emboss
     ];
 
@@ -152,9 +152,9 @@ export default function(opt, canvasTexture) {
       fbo.mat.uniforms.time.value = time;
       // console.log(noise.getVal(time));
       // fbo.mat.uniforms.mouse.value = new THREE.Vector2();
-      fbo.mat.uniforms.mouse.value = new THREE.Vector2(Math.sin(time)*2.5, Math.sin(time)*2.5);
+      // fbo.mat.uniforms.mouse.value = new THREE.Vector2(Math.sin(time/100.0), Math.sin(time/100.0));
 
-      // fbo.mat.uniforms.mouse.value = new THREE.Vector2(mouseX, mouseY);
+      fbo.mat.uniforms.mouse.value = new THREE.Vector2(mouseX/10.0, mouseY/10.0);
       // fbMaterial.fbos[i].material.uniforms.mouse.value = new THREE.Vector2(0.0,0.0);
       // fbo.mat.uniforms.mouse.value = new THREE.Vector2(window.innerWidth, 0);
 

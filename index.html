@@ -12,7 +12,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       z-index:1;
-      -webkit-text-stroke-width: 5px;
+      -webkit-text-stroke-width: 3px;
       -webkit-text-stroke-color: white;
       font-family: Arial;
       color:transparent;
@@ -26,6 +26,7 @@
       border-bottom: 10px solid white;
       padding-bottom:10px;
       min-width:1000px;
+      text-shadow: 0.0em 0.0em .35em rgba(228, 176, 255, 1.0);
     }
     .tagline {
       font-size:3em;
@@ -37,6 +38,8 @@
       margin-right:20px;
     }
     .recent-work {
+      /*text-shadow: 0.0em 0.0em .35em rgba(228, 176, 255, 1.0);*/
+
       font-size:3em;
       margin:0;
       -webkit-text-stroke-width: 1px;
@@ -49,14 +52,12 @@
     }
     .work-list{
       padding-left:60px;
-      margin-top:40px;
+      margin-top:30px;
     }
 
     .work-list .work-text{
       font-size:1.75em;
       margin:0;
-      -webkit-text-stroke-width: 0.5px;
-      -webkit-text-stroke-color: ghostwhite;
       padding-top:7px;
       padding-bottom:7px;
     }
@@ -64,11 +65,14 @@
     .work-text a {
       text-decoration:none;
       color:transparent;
-      -webkit-text-stroke-width: .5px;
-      -webkit-text-stroke-color: ghostwhite;
+      font-weight: bold;
+      -webkit-text-stroke-width: 1.35px;
+      -webkit-text-stroke-color: black;
     }
 
     .work-text a:hover{
+      text-shadow: 0.0em 0.0em .35em rgba(228, 176, 255, 1.0);
+
       font-style: italic;
 
       text-decoration:underline;
